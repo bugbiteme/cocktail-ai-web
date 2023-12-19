@@ -22,7 +22,7 @@ const RecipeFetcher = () => {
       console.log('API URL:', apiUrl);
       console.log('Environment Variables:', process.env);
       //const response = await fetch(apiUrl ||'https://cocktail-ai-git-cocktail.apps.cluster-fcv9b.dynamic.redhatworkshops.io/generate-recipe/', {
-      const response = await fetch(apiUrl || 'https://cocktail-ai/generate-recipe/', {
+      const response = await fetch(apiUrl || 'https://mocktail-cocktail.apps.cluster-fcv9b.dynamic.redhatworkshops.io/generate-recipe/', {
         method: 'POST',
         headers: {
           'accept': 'application/json',
