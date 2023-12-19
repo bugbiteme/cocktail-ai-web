@@ -6,17 +6,23 @@ const RecipeFetcher = () => {
   const [recipeData, setRecipeData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
-  const PORT = process.env.PORT || 8080;
+  //const PORT = process.env.PORT || 8080;
+  //const apiUrl = process.env.REACT_APP_API_URL;
 
-  const handleInputChange = (event) => {
+  function handleInputChange(event) {
     setPrompt(event.target.value);
-  };
+  }
 
   const handleSubmit = async () => {
     setIsLoading(true);
     setError(null);
     try {
-      const response = await fetch('https://cocktail-ai-git-cocktail.apps.cluster-fcv9b.dynamic.redhatworkshops.io/generate-recipe/', {
+      const apiUrl = process.env.REACT_APP_API_URL;
+      console.log('environment:',process.env.NODE_ENV);
+      console.log('API URL:', apiUrl);
+      console.log('Environment Variables:', process.env);
+      //const response = await fetch(apiUrl ||'https://cocktail-ai-git-cocktail.apps.cluster-fcv9b.dynamic.redhatworkshops.io/generate-recipe/', {
+      const response = await fetch(apiUrl || 'https://cocktail-ai/generate-recipe/', {
         method: 'POST',
         headers: {
           'accept': 'application/json',
