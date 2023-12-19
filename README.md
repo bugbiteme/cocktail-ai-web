@@ -1,10 +1,10 @@
 # Web Front End for cocktail-ai RestAPI
 
 ## Test locally
-- Set the `API_URL` environment variable on your system to the `generate-recipe` endpoint/path  
+- Set the `REACT_APP_API_URL` environment variable on your system to the `generate-recipe` endpoint/path  
 (Example)
 ```
-export API_URL="https://cocktail-ai/generate-recipe/"
+export REACT_APP_API_URLL="https://cocktail-ai/generate-recipe/"
 ```  
   
 - Launch app from command line from within the `CocktailAiWeb` directory  
